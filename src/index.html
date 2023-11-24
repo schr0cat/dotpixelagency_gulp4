@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main container grid-main">
+      @include('partials/sidebar.html')
+      <!-- <div class="main__middle-container"> -->
+        <div class="main__middle">
+          @include('partials/dashboard.html')
+          @include('partials/event-dates.html')
+        </div>
+      <!-- </div> -->
+      @include('partials/travel-booking.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

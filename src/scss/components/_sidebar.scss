@@ -1,0 +1,24 @@
+.sidebar {
+  padding-right: 10px;
+
+  @include tablet {
+    padding-right: 0;
+  }
+
+  @include mobile-xs {
+    display: block;
+  }
+
+  &__container {
+    padding-top: 39px;
+    padding-left: 25px;
+
+    @include tablet {
+      padding-top: 25px;
+    }
+
+    @include small-tablet {
+      padding-top: 0;
+    }
+  }
+}

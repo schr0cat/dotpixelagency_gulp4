@@ -1,0 +1,227 @@
+.discover {
+  margin-bottom: 57px;
+
+  @include desktop {
+    margin-bottom: 37px;
+  }
+
+  @include small-tablet {
+    margin-bottom: 45px;
+  }
+
+  @include mobile-xs {
+    padding: 0 15px;
+  }
+
+  &__title {
+    color: var(--stone-color);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: normal;
+
+    margin: 0 0 18px 0;
+
+    @include small-tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+
+    @include big-desktop {
+      flex-shrink: 1;
+    }
+  }
+}
+
+.subnav {
+  margin-bottom: 38px;
+
+  @include desktop {
+    margin-bottom: 28px;
+  }
+
+  @include mobile-xs {
+    margin-bottom: 18px;
+  }
+
+  &__list {
+    gap: 57px;
+
+    @include small-tablet {
+      gap: 25px;
+    }
+  }
+
+  &__link {
+    color: var(--stone-color);
+    font-size: var(--main-size);
+    font-weight: 400;
+    line-height: normal;
+
+    opacity: 0.7;
+
+    transition: opacity .3s ease-in-out;
+
+    @include hover {
+      opacity: 1;
+    }
+
+    &:active {
+      color: var(--active-color);
+      opacity: 1;
+    }
+  }
+}
+
+.cards {
+  &__list {
+    gap: 30px;
+    flex-shrink: 0;
+
+    @include big-desktop {
+      gap: 20px;
+    }
+
+    @include mobile-xs {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 35px;
+    }
+  }
+}
+
+.card {
+  position: relative;
+
+  &__top {
+    margin-bottom: 7px;
+
+    @include min-desktop {
+      margin-bottom: 4px;
+    }
+
+    @include mobile-xs {
+      justify-content: center;
+    }
+  }
+
+  &__image {
+    margin-bottom: 15px;
+
+    @include big-desktop {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @include min-desktop {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__favourites {
+    position: absolute;
+
+    right: 29px;
+    top: 25px;
+
+    padding: 11px;
+
+    background-color: rgba(255, 255, 255, 0.60);
+    backdrop-filter: blur(25px);
+
+    border: 0;
+    border-radius: 100%;
+
+    cursor: pointer;
+
+    @include min-desktop {
+      padding: 8px;
+
+      top: 13px;
+      right: 13px;
+    }
+  }
+
+  &__like-icon {
+    width: 24px;
+    height: 24px;
+
+    fill: var(--stone-color);
+
+    transition: fill .3s ease-in-out;
+
+    @include hover {
+      fill: var(--active-color);
+    }
+
+    &:active {
+      fill: var(--active-color);
+    }
+
+    @include min-desktop {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+
+    color: var(--stone-color);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__bottom {
+    gap: 20px;
+  }
+
+  &__info {
+    color: var(--stone-color);
+    font-size: var(--main-size);
+    font-weight: 500;
+    line-height: normal;
+
+    padding-left: 29px;
+
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    &--country {
+      opacity: 0.8;
+
+      background-image: url(../img/location.svg);
+      background-size: 19px 19px;
+    }
+
+    &--rating {
+      padding-left: 28px;
+      opacity: 0.7;
+      background-image: url(../img/star.svg);
+      background-position: -10px -2px;
+    }
+  }
+
+  &:active {
+    outline: 1px solid var(--active-color);
+    outline-offset: 5px;
+  }
+}
+
+.discover__link.focus-visible {
+  border: 5px solid var(--active-color);
+  outline-offset: 10px;
+}
+
+.subnav__link.focus-visible {
+  outline: 1px solid var(--active-color);
+  outline-offset: 3px;
+}
+
+.card__favourites.focus-visible {
+  outline: 2px solid var(--active-color);
+  outline-offset: 1px;
+}

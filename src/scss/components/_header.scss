@@ -1,0 +1,320 @@
+.header {
+  margin-bottom: 48px;
+
+  @include small-tablet {
+    margin-bottom: 38px;
+  }
+
+  @include mobile-xs {
+    margin-bottom: 30px;
+  }
+
+  &__container {
+    align-items: center;
+
+    padding-left: 42px;
+    padding-top: 24px;
+
+    @include small-tablet {
+      padding-left: 15px;
+    }
+
+    @include mobile-xs {
+      flex-wrap: wrap;
+
+      padding-top: 20px;
+    }
+  }
+
+  &__logo {
+    margin-right: 148px;
+
+    @include big-desktop {
+      margin-right: 100px;
+    }
+
+    @include tablet {
+      margin-right: 80px;
+    }
+
+    @include small-tablet {
+      margin-right: 40px;
+    }
+
+    @include mobile-xs {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+
+      margin: 0 0 20px 0;
+    }
+
+    img {
+      @include tablet {
+        width: 65px;
+        height: 56px;
+      }
+    }
+  }
+
+  &__search {
+    width: 668px;
+
+    margin-right: 62px;
+
+    @include desktop {
+      margin-right: 25px;
+    }
+
+    @include small-tablet {
+      margin-right: 15px;
+    }
+
+    @include mobile-xs {
+      margin-bottom: 15px;
+
+      order: 1;
+    }
+  }
+
+  &__input {
+    width: 100%;
+
+    padding: 14px 0 14px 55px;
+
+    box-sizing: border-box;
+
+    color: var(--stone-color);
+    font-size: var(--main-size);
+    font-weight: 400;
+    line-height: normal;
+
+    border-radius: 26.5px;
+    border: 0;
+
+    background-color: #e9f1fa;
+    background-image: url(../img/search-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 18px center;
+
+    &::placeholder {
+      color: var(--stone-color);
+    }
+
+    @include tablet {
+      background-position: 14px center;
+      background-size: 18px 18px;
+
+      padding: 10px 0 10px 40px;
+    }
+  }
+
+  &__btn {
+    &--fill {
+      margin-right: 74px;
+
+      @include desktop {
+        padding: 10px;
+      }
+
+      @include mobile-xs {
+        order: 2;
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+
+        fill: var(--light-color);
+
+        transition: fill .3s ease-in-out;
+
+        @include desktop {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      @include hover {
+        svg {
+          fill: var(--submarine-color);
+        }
+      }
+
+      &:active {
+        outline: 2px solid var(--active-color);
+        outline-offset: 3px;
+      }
+
+      @include tablet {
+        margin-right: 25px;
+      }
+
+      @include small-tablet {
+        margin-right: 10px;
+      }
+    }
+
+    &--stroke {
+      margin-right: 33px;
+
+      padding: 14px 15px 15px 14px;
+
+      position: relative;
+
+      @include desktop {
+        padding: 10px 11px 11px 10px;
+      }
+
+      @include mobile-xs {
+        order: 3;
+
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      svg {
+        width: 22px;
+        height: 22px;
+
+        fill: var(--stone-color);
+
+        transition: fill .3s ease-in-out;
+
+        @include desktop {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      &:after {
+        position: absolute;
+        content: url(../../img/svg/circle.svg);
+
+        right: 0;
+        bottom: 45px;
+
+        @include desktop {
+          bottom: 30px;
+        }
+      }
+
+      @include hover {
+        svg {
+          fill: var(--active-color);
+        }
+      }
+
+      &:active {
+        outline: 2px solid var(--active-color);
+        outline-offset: 3px;
+      }
+
+      @include small-tablet {
+        margin-right: 20px;
+      }
+
+      @include mobile-xs {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__line {
+    width: 1px;
+    height: 41px;
+
+    border: 0;
+
+    background-color: var(--submarine-color);
+
+    margin-right: 37px;
+
+    @include tablet {
+      height: 30px;
+
+      margin-right: 25px;
+    }
+
+    @include small-tablet {
+      width: 2px;
+
+      margin-right: 10px;
+    }
+
+    @include mobile-xs {
+      display: none;
+    }
+  }
+
+  &__location {
+    gap: 14px;
+
+    margin-right: 88px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      fill: var(--submarine-color);
+
+      @include tablet {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    @include tablet {
+      margin-right: 32px;
+    }
+
+    @include small-tablet {
+      margin-right: 20px;
+    }
+
+    @include mobile-xs {
+      order: 4;
+
+      margin-right: 30px;
+      margin-top: 12px;
+    }
+  }
+
+  &__city {
+    color: var(--stone-color);
+    font-size: var(--main-size);
+    font-weight: 500;
+    line-height: normal;
+
+    width: max-content;
+  }
+
+  &__avatar {
+    width: 53px;
+    height: 53px;
+
+    object-fit: cover;
+
+    cursor: pointer;
+
+    @include min-desktop {
+      width: 43px;
+      height: 43px;
+    }
+
+    @include mobile-xs {
+      order: 3;
+    }
+  }
+}
+
+.header__btn--stroke.focus-visible, .header__btn--fill.focus-visible {
+  outline: 2px solid var(--active-color);
+  outline-offset: 1px;
+}
+
+.header__input.focus-visible {
+  outline: 2px solid var(--active-color);
+  outline-offset: 1px;
+}

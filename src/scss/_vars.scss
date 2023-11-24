@@ -1,0 +1,19 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Baloo 2", sans-serif;
+  --content-width: 1498px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --offset: 20px;
+
+  // colors
+  --light-color: #fff;
+  --submarine-color: #b4bcc4;
+  --stone-color: #18333e;
+  --active-color: #ff7f5c;
+
+  // font-sizes
+  --main-size: 16px;
+}
